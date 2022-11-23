@@ -54,7 +54,7 @@ void identify(Base& p)
 		std::cout << "A" << std::endl;
 		return ;
 	}
-	catch (std::bad_cast &bc)
+	catch (std::bad_cast)
 	{
 		std::cout << "Not A" << std::endl;
 	}
@@ -64,7 +64,7 @@ void identify(Base& p)
 		std::cout << "B" << std::endl;
 		return ;
 	}
-	catch (std::bad_cast &bc)
+	catch (std::bad_cast)
 	{
 		std::cout << "Not B" << std::endl;
 	}
@@ -82,7 +82,7 @@ int main(void)
 {
 	std::srand(std::time(NULL));
 
-	std::cout << "--GENERATE--" << std::endl;
+	std::cout << "--GENERATE()--" << std::endl;
 	Base *rand1 = generate();
 	Base *rand2 = generate();
 	Base *rand3 = generate();
