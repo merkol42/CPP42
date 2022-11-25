@@ -39,7 +39,8 @@ int main(int, char**)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		// std::cerr << e.what() << '\n';
+		std::cout << "zaaaaaa\n";
 	}
 	try
 	{
