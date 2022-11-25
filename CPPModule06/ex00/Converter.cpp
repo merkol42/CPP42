@@ -2,19 +2,14 @@
 #include <limits.h>
 #include <string>
 
-static void	ft_msg(std::string msg)
-{
-	std::cout << msg << std::endl;
-}
-
 Converter::Converter() : str("Default")
 {
-	std::cout << "Convertor Default Constructor Called!" << std::endl;
+	std::cout << "Converter Default Constructor Called!" << std::endl;
 }
 
 Converter::Converter(std::string str) : str(str)
 {
-	std::cout << "Convertor String Constructor Called!" << std::endl;
+	std::cout << "Converter String Constructor Called!" << std::endl;
 }
 
 Converter::~Converter()
@@ -25,7 +20,7 @@ Converter::~Converter()
 Converter::Converter(const Converter& ref)
 {
 	str = ref.getStr();
-	std::cout << "Convertor Coppy Constructor Called!" << std::endl;
+	std::cout << "Converter Coppy Constructor Called!" << std::endl;
 }
 
 Converter &	Converter::operator=(const Converter& ref)

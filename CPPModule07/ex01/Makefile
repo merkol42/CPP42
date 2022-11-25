@@ -1,4 +1,4 @@
-NAME	= convert
+NAME	= iter
 CC		= c++
 CFLAGS	= -Wall -Werror -Wextra -std=c++98
 MFILES	= $(wildcard ./*.cpp)

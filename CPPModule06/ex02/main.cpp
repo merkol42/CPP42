@@ -56,7 +56,7 @@ void identify(Base& p)
 	}
 	catch (std::bad_cast)
 	{
-		std::cout << "Not A" << std::endl;
+		// std::cout << "Not A" << std::endl;
 	}
 	try
 	{
@@ -66,7 +66,7 @@ void identify(Base& p)
 	}
 	catch (std::bad_cast)
 	{
-		std::cout << "Not B" << std::endl;
+		// std::cout << "Not B" << std::endl;
 	}
 	try {
 		(void)dynamic_cast<C &>(p);

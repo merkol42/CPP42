@@ -21,9 +21,11 @@ int main(int, char**)
 	}
 	//SCOPE
 	{
+		std::cout << "-------------------------" << std::endl;
 		Array<int> tmp = numbers;
 		Array<int> test(tmp);
 	}
+	std::cout << "-------------------------" << std::endl;
 	//mirror[5] = numbers[1];
 	for (int i = 0; i < MAX_VAL; i++)
 	{
@@ -40,7 +42,7 @@ int main(int, char**)
 	catch(const std::exception& e)
 	{
 		// std::cerr << e.what() << '\n';
-		std::cout << "zaaaaaa\n";
+		std::cout << "Invalid Index!!" << std::endl;
 	}
 	try
 	{
@@ -48,7 +50,8 @@ int main(int, char**)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		// std::cerr << e.what() << '\n';
+		std::cout << "Invalid Index!!" << std::endl;
 	}
 
 	for (int i = 0; i < MAX_VAL; i++)
