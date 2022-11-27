@@ -11,7 +11,7 @@
 
 void	print_value(int i)
 {
-	std::cout << i << std::endl;
+	std::cout << i << "\t";
 }
 
 int main(void)
@@ -21,8 +21,11 @@ int main(void)
 
 	for (int i = 1; i <= 5; i++)
 		lst.push_front(i);
+
 	std::for_each(lst.begin(), lst.end(), print_value);
-	std::cout << "easyfind():" << std::endl;
+	std::cout << std::endl;
+
+	std::cout << "easyfind(lst, 3):" << std::endl;
 	std::cout << easyfind(lst, 3) << std::endl << std::endl;
 	std::cout << "out of rane:" << std::endl;
 	try
@@ -44,7 +47,7 @@ int main(void)
 	std::for_each(vector.begin(), vector.end(), print_value);
 	std::cout << std::endl;
 
-	std::cout << "easyfind():" << std::endl;
+	std::cout << "easyfind(vector, 3):" << std::endl;
 	std::cout << easyfind(vector, 3) << std::endl << std::endl;
 	std::cout << "out of rane:" << std::endl;
 	try
@@ -67,7 +70,7 @@ int main(void)
 	std::for_each(array.begin(), array.end(), print_value);
 	std::cout << std::endl;
 
-	std::cout << "easyfind():" << std::endl;
+	std::cout << "easyfind(array, 2):" << std::endl;
 	std::cout << easyfind(array, 2) << std::endl << std::endl;
 	std::cout << "out of rane:" << std::endl;
 	try

@@ -8,15 +8,17 @@
 # include <vector>
 # include <array>
 
-// T is a container of int
 // Find the the first occurrence of the second parameter in the first parameter
 template< typename T >
 int easyfind(T const& t, int n)
 {
 	typename T::const_iterator end = t.end();
 
-	// STL algorithm "find" returns the iterator to the element found if it finds it
-	// otherwise it will return the t.end() pointer (a pointer to the element after last)
+	/*
+		Finds the element in the given range of numbers. 
+		Returns an iterator to the first element in the range [first,last) that compares equal to val.
+		If no such element is found, the function returns last.
+	*/
 	typename T::const_iterator it = std::find(t.begin(), end, n);
 
 	return (it == end ? throw(std::out_of_range("Element not found in given range")) : *it);
