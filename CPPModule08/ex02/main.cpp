@@ -32,7 +32,7 @@ int main()
 
 	std::cout << "--Size--" << std::endl;
 	std::stack<int> s(mstack);
-	std::cout << s.top() << std::endl;
-	std::cout << mstack.top() << std::endl;
+	std::cout << s.size() << std::endl;
+	std::cout << mstack.size() << std::endl;
 	return 0;
 }

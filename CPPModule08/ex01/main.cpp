@@ -11,8 +11,8 @@ int main()
 	sp.addNumber(9);
 	sp.addNumber(11);
 
-	std::cout << sp.shortestSpan() << std::endl;
-	std::cout << sp.longestSpan() << std::endl << std::endl;
+	std::cout << "Shortest Span : " << sp.shortestSpan() << std::endl;
+	std::cout << "Longest Span : " <<sp.longestSpan() << std::endl << std::endl;
 	
 	std::cout << "---MY TEST---" << std::endl;
 	Span sp1(10000);
@@ -48,8 +48,5 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
-	
-	
-	
 	return 0;
 }
