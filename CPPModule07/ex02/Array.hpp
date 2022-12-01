@@ -17,12 +17,20 @@ public:
 	~Array();
 
 	Array&	operator=(const Array& ref);
-	T&	operator[](int index);
+	T&	operator[](int index) const;
 
 	T	*getT() const;
 	unsigned int	size() const;
 };
 
+template<typename T>
+std::ostream&	operator<<(std::ostream &os, const Array<T>& ref)
+{
+	os << "Size : " << ref.size() << std::endl;
+	for (unsigned int i = 0; i < ref.size() ; i++)
+		os << "index [" << i << "] :" << ref[i] << std::endl;
+	return (os);
+}
 
 // default constructor
 template<typename T>
@@ -84,7 +92,7 @@ Array<T>&	Array<T>::operator=(const Array& ref)
 
 // operator[]()
 template<typename T>
-T&	Array<T>::operator[](int index)
+T&	Array<T>::operator[](int index) const
 {
 	if (index < 0 || index >= static_cast<int>(this->n))
 	{

@@ -6,10 +6,6 @@
 #define MAX_VAL 750
 int main(int, char**)
 {
-	// Array<int> numbers(5);
-	// Array<char>	sa(5);
-	// sa[0] = 'A';
-	// std::cout << sa[0] << std::endl;
 	Array<int> numbers(MAX_VAL);
 	int* mirror = new int[MAX_VAL];
 	srand(time(NULL));
@@ -59,5 +55,17 @@ int main(int, char**)
 		numbers[i] = rand();
 	}
 	delete [] mirror;//
+
+	std::cout << "---------------------" << std::endl;
+	Array<int> index(5);
+	Array<char>	sa(5);
+	sa[0] = 'A';
+	std::cout << sa[0] << std::endl;
+	std::cout << index[2] << std::endl;
+	
+	std::cout << index << std::endl;
+	std::cout << sa << std::endl;
+
+	// std::system("leaks array");
 	return 0;
 }
