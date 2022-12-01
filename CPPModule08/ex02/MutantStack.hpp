@@ -26,7 +26,6 @@ class MutantStack : public std::stack<T>
 				v.push_back(top);
 				this->pop();
 				n++;
-				
 			}
 			this->push(v[n - 1]);
 			n--;
@@ -35,7 +34,6 @@ class MutantStack : public std::stack<T>
 				this->push(v[n]);
 			return (ret);
 		}
-
 		iterator end()
 		{
 			return (&this->top() + 1);

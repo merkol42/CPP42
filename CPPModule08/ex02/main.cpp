@@ -1,4 +1,5 @@
 #include "MutantStack.hpp"
+#include <list>
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
 
 	mstack.pop();
 
-	std::cout << "mstack.size() :" << mstack.size() << std::endl;
+	std::cout << "after pop() mstack.size() :" << mstack.size() << std::endl;
 
 	mstack.push(3);
 	mstack.push(5);
@@ -19,8 +20,14 @@ int main()
 	mstack.push(42);
 	mstack.push(0);
 
+	mstack.pop();
+	
+	std::cout << "mstack.top() :" << mstack.top() << std::endl;
+
 	MutantStack<int>::iterator it = mstack.begin();
 	MutantStack<int>::iterator ite = mstack.end();
+
+	std::list<int> a(it, ite);
 
 	++it;
 	--it;
@@ -28,6 +35,15 @@ int main()
 	{
 		std::cout << *it << std::endl;
 		++it;
+	}
+
+	std::cout << "--list test--" << std::endl;
+	std::list<int>::iterator i = a.begin();
+	std::list<int>::iterator ie = a.end();
+
+	for (; i != ie; i++)
+	{
+		std::cout << *i << std::endl;
 	}
 
 	std::cout << "--Size--" << std::endl;
